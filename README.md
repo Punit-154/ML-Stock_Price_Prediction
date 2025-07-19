@@ -1,31 +1,56 @@
-# ML-Stock_Price_Prediction
-This is my first ML project,Predicting the stock prices,over a period of time
-The goal of this Project is to understand and predict the stock prices of various companies using past data and visualizing the graphs in order to understand the market trend
+# ML Stock Price Prediction
 
-**Technologies Used**
-1)Python 
-2)Pandas
-3)Numpy
-4)Matplotlib
-5)Scikit-learn
-6)Jupyter Notebook
-**Dataset**
-The dataset prices.csv contains data such as Date, symbol, Open, Close, Low, High, Volume.
-The dataset securities.csv contains data such as Ticker Symbol, Security, SEC filings, GICS Sector, GICS Sub Industry, Address of Headquarters, Date first added, CIK
-**Project Working**
-Step-1:Data Preprocessing
-    The data is first checked for presence of null values.In this data,no null values are present
-Step-2:Model Building
-    PCA(Principle Component Analysis) feature analysis is applied and we find that the "Open" columns explains about 99% of the data 
-    Hence the "Open" columns has been used in order to save time and resources sent during computing
-    A Linear regrssion model is applied in order to predict the price
-Step-3:Evaluation & Visualization
-  The accuracy of the model is predicted and is estimated to be around 99.98%
-  A function was created which allowed the user to input company Ticker Symbols and pplot the graph between the predicted prices and actual prices
-  Along with the graph,all the details of the company was added along wiht its accuracy,highest and lowest predicted price and actual price
+The goal of this project is to analyze historical stock data, build a prediction model using ML techniques, and visualize trends to understand market behavior.
 
 
-**Future Improvements**
-  Add support for time series forecasting (e.g., LSTM, ARIMA)
-  Include more features like market indicators or sentiment analysis
-  Host the notebook using Streamlit or Flask for an interactive UI
+
+## Technologies Used
+
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Scikit-learn  
+- Jupyter Notebook  
+
+
+## Dataset
+
+Two datasets were used:
+
+1. **`prices.csv`** – Contains:
+   - `date`, `symbol`, `open`, `close`, `low`, `high`, `volume`
+
+2. **`securities.csv`** – Contains:
+   - `Ticker Symbol`, `Security`, `SEC filings`, `GICS Sector`, `GICS Sub Industry`, `Headquarters Address`, `Date First Added`, `CIK`
+
+---
+
+## Project Workflow
+
+### Step 1: Data Preprocessing
+- Checked for null values — none found.
+
+### Step 2: Model Building
+- Applied PCA (Principal Component Analysis).
+- Found that the `open` column explains ~99% of the variance.
+- Used `open` column to build a **Linear Regression** model.
+
+### Step 3: Evaluation & Visualization
+- Model accuracy ≈ **99.98%**.
+- A function allows users to enter a ticker symbol and view:
+  - Actual vs Predicted price graph
+  - Company info (sector, address, etc.)
+  - Summary: accuracy, highest/lowest actual and predicted prices
+
+---
+
+## Future Improvements
+
+- Add time series forecasting (e.g., LSTM, ARIMA)
+- Use additional features (market indicators, sentiment analysis)
+- Deploy using Streamlit or Flask for interactivity
+
+---
+
+
